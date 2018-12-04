@@ -14,14 +14,14 @@ import type { ReduxState, ReduxAction, Dispatch } from './types';
 import reducers from './reducers';
 import sagas from './sagas';
 
-type StoreCreator<State, Action> = (
-  reducer: Reducer<State, Action>,
-  preloadedState?: State,
-  enhancer?: StoreEnhancer<State, Action, Dispatch>,
-) => Store<State, Action, Dispatch>;
+type StoreCreator = (
+  reducer: Reducer<ReduxState, ReduxAction>,
+  preloadedState?: ReduxState,
+  enhancer?: StoreEnhancer<ReduxState, ReduxAction, Dispatch>,
+) => Store<ReduxState, ReduxAction, Dispatch>;
 
 let sagaMiddleware: Middleware<ReduxState, ReduxAction>;
-let storeCreator: StoreCreator<ReduxState, ReduxAction>;
+let storeCreator: StoreCreator;
 if (__DEV__) {
   const Reactotron = require('reactotron-react-native').default;
   const sagaMonitor = Reactotron.createSagaMonitor();

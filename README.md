@@ -1,7 +1,7 @@
 # Get started
 
 ```
-react-native init awesome-project --template allmax
+react-native init awesome_project --template allmax
 ```
 
 # Roadmap

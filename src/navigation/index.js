@@ -13,7 +13,6 @@ import {
 
 export const mainNavigation = createNavigation(navigationNames.main);
 
-
 const AppNavigator = createStackNavigator(
   // $FlowFixMe
   {
