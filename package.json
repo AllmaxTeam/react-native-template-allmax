@@ -1,0 +1,31 @@
+{
+  "name": "react-native-template-allmax",
+  "version": "1.0.0",
+  "description": "React native template with navigation, redux, redux-saga, eslit, flow, reactotron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllmaxTeam/react-native-template-allmax.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "template",
+    "boilerplate",
+    "redux",
+    "saga",
+    "eslit",
+    "flow",
+    "reactotron",
+    "allmax"
+  ],
+  "author": "Dmitriy Shishkin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllmaxTeam/react-native-template-allmax/issues"
+  },
+  "homepage": "https://github.com/AllmaxTeam/react-native-template-allmax#readme"
+}

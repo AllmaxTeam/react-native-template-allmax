@@ -1,0 +1,32 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "valid-jsdoc": "error",
+    "no-shadow": "off",
+    "no-console": "off",
+    "object-curly-newline": "off",
+    "function-paren-newline": ["error", "consistent"],
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": "off",
+    "react/no-unused-prop-types": "off",
+    "react/sort-comp": "off",
+    "react/no-array-index-key": "off",
+    "react/require-default-props": "off",
+    "react/no-unused-state": "off"
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "__DEV__": true,
+    "TimeoutID": true,
+    "$Shape": true,
+    "Reactotron": true
+  }
+}
