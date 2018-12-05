@@ -2,7 +2,7 @@
 
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-import { navigationNames, routeNames } from '~/constants';
+import { navigationNames, routeNames } from '~/global';
 import { createNavigation } from '~/components';
 import {
   SplashScreen,

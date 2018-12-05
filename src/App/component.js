@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react';
 
-import { navigationNames } from '~/constants';
+import { navigationNames } from '~/global';
 import { Navigation } from '~/navigation';
 import { createNavigatiorSetter } from '~/components';
 

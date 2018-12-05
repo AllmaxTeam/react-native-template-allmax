@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react';
 import { View, ScrollView, Text, TextInput, Button } from 'react-native';
 
-import { regularExpressions } from '~/constants';
+import { regularExpressions } from '~/global';
 
 import type { StackNavigationOptions } from '~/types';
 import type { Props, State } from './types';

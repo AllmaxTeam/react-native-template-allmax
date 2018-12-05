@@ -9,7 +9,7 @@ import type {
   BooksState,
 } from './types';
 
-import { makeReducer } from '~/utils';
+import { makeReducer } from '~/global';
 
 import {
   SET_BOOKS,

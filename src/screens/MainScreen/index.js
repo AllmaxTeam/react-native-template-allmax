@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView, Image, Button } from 'react-native';
 
-import { images, routeNames } from '~/constants';
+import { images, routeNames } from '~/global';
 
 import type { StackNavigationOptions, Navigation } from '~/types';
 

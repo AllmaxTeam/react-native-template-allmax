@@ -7,7 +7,7 @@
 import { delay } from 'redux-saga';
 import { takeLatest, call } from 'redux-saga/effects';
 
-import { routeNames } from '~/constants';
+import { routeNames } from '~/global';
 import { mainNavigation } from '~/navigation';
 
 import type { Saga } from '~/types';
