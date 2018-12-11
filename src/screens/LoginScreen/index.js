@@ -3,11 +3,13 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 
+import { strings } from '~/global';
+
 import type { StackNavigationOptions } from '~/types';
 
 export class LoginScreen extends PureComponent<{}> {
   static navigationOptions: StackNavigationOptions = {
-    title: 'Login',
+    title: strings.login.headerTitle,
   };
 
   render() {

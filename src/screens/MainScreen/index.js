@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView, Image, Button } from 'react-native';
 
-import { images, routeNames } from '~/global';
+import { strings, images, routeNames } from '~/global';
 
 import type { StackNavigationOptions, Navigation } from '~/types';
 
@@ -15,7 +15,7 @@ export type Props = {|
 
 export class MainScreen extends PureComponent<Props> {
   static navigationOptions: StackNavigationOptions = {
-    title: 'Main',
+    title: strings.main.headerTitle,
   };
 
   goToBooks = () => {
@@ -33,7 +33,7 @@ export class MainScreen extends PureComponent<Props> {
     return (
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <Image source={images.allmaxLogo} style={styles.logo} />
-        <Button title="Go to books" onPress={this.goToBooks} />
+        <Button title={strings.main.booksButtonTitle} onPress={this.goToBooks} />
       </ScrollView>
     );
   }

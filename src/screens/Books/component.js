@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react';
 import { View, ScrollView, Text, TextInput, Button } from 'react-native';
 
-import { regularExpressions } from '~/global';
+import { strings, regularExpressions } from '~/global';
 
 import type { StackNavigationOptions } from '~/types';
 import type { Props, State } from './types';
@@ -12,7 +12,7 @@ import { styles } from './styles';
 
 export class UnconnectedBooksScreen extends PureComponent<Props, State> {
   static navigationOptions: StackNavigationOptions = {
-    title: 'Books',
+    title: strings.books.headerTitle,
   };
 
   state = {
@@ -65,7 +65,7 @@ export class UnconnectedBooksScreen extends PureComponent<Props, State> {
     return (
       <ScrollView contentContainerStyle={styles.contentContainer}>
         <Text>
-          {`Avaliable: ${avaliableCount}`}
+          {strings.books.getAvaliableTitle(avaliableCount)}
         </Text>
         <View style={styles.countRow}>
           <Text>Count:</Text>
@@ -76,8 +76,14 @@ export class UnconnectedBooksScreen extends PureComponent<Props, State> {
             maxLength={3}
           />
         </View>
-        <Button title={`Take ${count} books`} onPress={this.onTakeBooksPress} />
-        <Button title={`Return ${count} books`} onPress={this.onReturnBooksPress} />
+        <Button
+          title={strings.books.getTakeButtonTitle(count)}
+          onPress={this.onTakeBooksPress}
+        />
+        <Button
+          title={strings.books.getReturnButtonTitle(count)}
+          onPress={this.onReturnBooksPress}
+        />
       </ScrollView>
     );
   }

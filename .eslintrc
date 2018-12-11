@@ -9,6 +9,7 @@
     "no-console": "off",
     "object-curly-newline": "off",
     "function-paren-newline": ["error", "consistent"],
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
     "import/no-unresolved": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
@@ -21,12 +22,16 @@
   },
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react",
+    "jsx-a11y",
+    "import"
   ],
   "globals": {
     "__DEV__": true,
     "TimeoutID": true,
     "$Shape": true,
+    "$ReadOnly": true,
+    "$Keys": true,
     "Reactotron": true
   }
 }

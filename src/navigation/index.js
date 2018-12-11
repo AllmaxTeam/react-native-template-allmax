@@ -11,6 +11,8 @@ import {
   BooksScreen,
 } from '~/screens';
 
+import { styles } from './styles';
+
 export const mainNavigation = createNavigation(navigationNames.main);
 
 const AppNavigator = createStackNavigator(
@@ -31,6 +33,7 @@ const AppNavigator = createStackNavigator(
   },
   {
     initialRouteName: routeNames.splash,
+    cardStyle: styles.cardStyle,
   },
 );
 
