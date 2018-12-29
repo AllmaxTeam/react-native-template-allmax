@@ -2,16 +2,20 @@
 
 import { Keyboard } from 'react-native';
 
+import {
+  isIos,
+} from './constants';
+
 import type {
   Listeners,
   KeyboardEventListener,
-} from 'types';
+} from '~/types';
 
 export class ListenersManager {
   listeners: Listeners = [];
 
   addKeyboardListeners = ({
-    onHideEventName = isIOS ? 'keyboardWillHide' : 'keyboardDidHide',
+    onHideEventName = isIos ? 'keyboardWillHide' : 'keyboardDidHide',
     onShow,
     onHide,
     otherListeners,
@@ -23,7 +27,7 @@ export class ListenersManager {
   }) => {
     const { listeners } = this;
     listeners.push(
-      Keyboard.addListener(isIOS ? 'keyboardWillShow' : 'keyboardDidShow', onShow),
+      Keyboard.addListener(isIos ? 'keyboardWillShow' : 'keyboardDidShow', onShow),
       Keyboard.addListener(onHideEventName, onHide),
     );
     if (otherListeners != null) {
