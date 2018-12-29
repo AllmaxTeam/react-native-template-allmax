@@ -11,6 +11,7 @@ import type {
 import type {
   SyntheticEvent,
 } from 'react-native/Libraries/Types/CoreEventTypes';
+import type { KeyboardEvent } from 'react-native/Libraries/Components/Keyboard/Keyboard';
 
 export type {
   Element,
@@ -49,3 +50,11 @@ export type StyleSheetValue = $Shape<ImpreciseStyle>;
 export type RefObject<ElementType> = {
   current: ElementRef<ElementType> | null,
 };
+
+export type KeyboardEventListener = (e: KeyboardEvent) => void;
+
+export type Listener = {
+  +remove: () => void,
+};
+
+export type Listeners = Array<Listener>;
