@@ -1,7 +1,6 @@
 // @flow
 
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import {
   fetchBooks,
@@ -9,7 +8,7 @@ import {
   returnBooks,
 } from '~/redux/actionCreators';
 
-import type { ReduxState, Dispatch } from '~/types';
+import type { ReduxState } from '~/types';
 import type { ConnectingProps, ConnectingActionCreators } from './types';
 
 import { UnconnectedBooksScreen } from './component';
@@ -28,14 +27,11 @@ function mapStateToProps({
   };
 }
 
-const mapDispatchToProps = (dispatch: Dispatch): ConnectingActionCreators => bindActionCreators(
-  {
-    fetchBooks,
-    takeBooks,
-    returnBooks,
-  },
-  dispatch,
-);
+const mapDispatchToProps: ConnectingActionCreators = {
+  fetchBooks,
+  takeBooks,
+  returnBooks,
+};
 
 export const BooksScreen = connect(
   mapStateToProps,

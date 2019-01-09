@@ -15,5 +15,5 @@ export default function* sagas(): Saga<void> {
   yield all([
     app,
     books,
-  ].reduce((allSagas, sagas) => allSagas.concat(sagas), []));
+  ].reduce((allSagas, currentSagas) => allSagas.concat(currentSagas), []));
 }

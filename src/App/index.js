@@ -1,7 +1,6 @@
 // @flow
 
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import { onAppStart } from '~/redux/actionCreators';
 
@@ -9,12 +8,9 @@ import type { ConnectingActionCreators } from './types';
 
 import { UnconnectedApp } from './component';
 
-const mapDispatchToProps = (dispatch: *): ConnectingActionCreators => bindActionCreators(
-  {
-    onAppStart,
-  },
-  dispatch,
-);
+const mapDispatchToProps: ConnectingActionCreators = {
+  onAppStart,
+};
 
 export const App = connect(
   null,

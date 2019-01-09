@@ -4,8 +4,8 @@
     "es6": true
   },
   "rules": {
+    "curly": ["error", "all"],
     "valid-jsdoc": "error",
-    "no-shadow": "off",
     "no-console": "off",
     "object-curly-newline": "off",
     "function-paren-newline": ["error", "consistent"],
@@ -28,6 +28,7 @@
     "import"
   ],
   "globals": {
+    "fetch": true,
     "__DEV__": true,
     "TimeoutID": true,
     "navigator": true,

@@ -7,7 +7,7 @@ if (__DEV__) {
   const { reactotronRedux } = require('reactotron-redux');
   const sagaPlugin = require('reactotron-redux-saga');
   Reactotron.configure({
-    name: 'Savl',
+    name: 'HelloWorld',
     // host: '192.168.88.37',
   })
     .useReactNative()
